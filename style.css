@@ -271,3 +271,333 @@ footer {
     }
 }
 
+/* Жалпы жөндөөлөр */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Шапка / Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: linear-gradient(90deg, #064e3b, #022c22);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #34d399;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(52, 211, 153, 0.2);
+    color: #34d399;
+}
+
+/* Баннер / Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(2, 44, 34, 0.8), rgba(2, 44, 34, 0.85)), 
+                url('https://images.unsplash.com/photo-1585036156171-384164a8c675?w=1200') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Баскычтар / Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+/* Секциялар */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #064e3b;
+    margin-bottom: 15px;
+}
+
+.subtitle, .section-desc {
+    color: #64748b;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* Карточкалар / Шарттар */
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #064e3b;
+    margin-bottom: 8px;
+}
+
+/* Өтүлүүчү сабактар */
+.subject-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.subject-item {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Кабыл алуу / Admission */
+.admission-box {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #10b981;
+    display: inline-block;
+    max-width: 500px;
+}
+
+.admission-box h3 {
+    margin-bottom: 10px;
+    color: #064e3b;
+}
+
+.admission-box p {
+    margin-bottom: 20px;
+}
+
+/* Байланыш жана Дарек */
+.contact-card {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 25px 35px;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-card p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.contact-card a {
+    color: #065f46;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Модалдык терезе (Popup) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #064e3b;
+}
+
+input, select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #10b981;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.success-msg {
+    color: #059669;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    background: #ecfdf5;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Подвал / Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #022c22;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Мобилдик түзмөктөр үчүн адаптивизация */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
